@@ -72,7 +72,7 @@ class TaskListView extends Main {
     }
 
     private void createTask() {
-        taskService.createTask(description.getValue(), dueDate.getValue());
+        taskService.create(description.getValue(), dueDate.getValue());
         taskGrid.getDataProvider().refreshAll();
         description.clear();
         dueDate.clear();
