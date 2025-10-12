@@ -12,6 +12,10 @@ import com.vaadin.flow.router.Layout;
 import com.vaadin.flow.server.menu.MenuConfiguration;
 import com.vaadin.flow.server.menu.MenuEntry;
 
+//inicio da alteração
+import com.example.email.ui.SendEmailView; // importa a nova view
+//fim da alteração
+
 import static com.vaadin.flow.theme.lumo.LumoUtility.*;
 
 @Layout
@@ -38,7 +42,16 @@ public final class MainLayout extends AppLayout {
     private SideNav createSideNav() {
         var nav = new SideNav();
         nav.addClassNames(Margin.Horizontal.MEDIUM);
+
+        // adiciona automaticamente as páginas já registadas
         MenuConfiguration.getMenuEntries().forEach(entry -> nav.addItem(createSideNavItem(entry)));
+
+        //inicio da alteração
+        // adiciona manualmente a página "Enviar Email" ao menu lateral
+        var emailItem = new SideNavItem("Enviar Email", SendEmailView.class, VaadinIcon.ENVELOPE.create());
+        nav.addItem(emailItem);
+        //fim da alteração
+
         return nav;
     }
 
