@@ -22,7 +22,7 @@ public class TaskService {
     }
 
     @Transactional
-    public void create(String description, @Nullable LocalDate dueDate) {
+    public void createTask(String description, @Nullable LocalDate dueDate) {
         if ("fail".equals(description)) {
             throw new RuntimeException("This is for testing the error handler");
         }
