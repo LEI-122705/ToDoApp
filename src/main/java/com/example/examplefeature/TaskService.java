@@ -43,4 +43,8 @@ public class TaskService {
         return taskRepository.findAllBy(pageable).toList();
     }
 
+    @Transactional(readOnly = true)
+    public List<Task> listAll() {
+        return taskRepository.findAll();
+    }
 }
