@@ -74,7 +74,8 @@
             <artifactId>moneta</artifactId>
             <version>1.4.2</version>
             <type>pom</type>
-        <!-- ✅ Nova dependência: Biblioteca ZXing para QR Codes -->
+        </dependency>
+
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
