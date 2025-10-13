@@ -109,7 +109,7 @@ class TaskListView extends Main {
                 List l= new List(List.UNORDERED); //ORDERED da numbered lista
 
                 //guardar todos os elementos
-                DateTimeFormatter dateForm = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).withLocale(getLocale());//para formatar datas corretamente
+                DateTimeFormatter dateForm = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).withLocale(getLocale());//para formatar datas corretamente
 
                 var tasks= taskService.listAll(); //assim nao tenho de converter a tabela, faz automaticamente :/
                 for(Task t: tasks){
