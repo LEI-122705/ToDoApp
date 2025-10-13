@@ -1,6 +1,14 @@
 # App README
 
 - [ ] TODO Replace or update this README with instructions relevant to your application
+## Grupo ICCE - Membros do Grupo:
+- Constança Costa - 111088
+- Eurisa Patrício - 111812
+- Iris Baptista - 122701
+- Constança Ferreira - 122705
+
+### Link do vídeo de apresentação do projeto:
+https://youtu.be/n1Si8Dq6y2A
 
 ## Project Structure
 
