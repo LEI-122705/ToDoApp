@@ -1,6 +1,5 @@
 # App README
 
-- [ ] TODO Replace or update this README with instructions relevant to your application
 ## Grupo ICCE - Membros do Grupo:
 - Constança Costa - 111088
 - Eurisa Patrício - 111812
@@ -9,6 +8,13 @@
 
 ### Link do vídeo de apresentação do projeto:
 https://youtu.be/n1Si8Dq6y2A
+
+## Funcionalidade build da pipeline:
+#### 1. Fazer checkout do repositório para conseguir aceder ao código
+#### 2. Configurar o Java para ter a versão 21
+#### 3. Limpar as compilações anteriores, compilar o código e empacotar num `.jar`
+#### 4. Copiar o `.jar` para a raiz do repositório
+#### 5. Publicar o `.jar` como um artefacto da workflow
 
 ## Project Structure
 
