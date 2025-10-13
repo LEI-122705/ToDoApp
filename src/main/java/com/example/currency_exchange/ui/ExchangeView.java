@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Route("exchange")
 @PageTitle("Currency Conversion")
-@Menu(order = 1, icon = "vaadin:money", title = "Currency Exchange")
+@Menu(order = 1, icon = "vaadin:money-exchange", title = "Currency Exchange")
 public class ExchangeView extends VerticalLayout {
     // ComboBox para seleção da moeda de origem
     final ComboBox<String> fromCurrency = new ComboBox<>("Moeda de origem");
