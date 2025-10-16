@@ -130,7 +130,9 @@ class TaskListView extends Main {
                 doc.add(l);
                 doc.close();
             }
-            catch(Exception e){}
+            catch(Exception e){
+                System.err.println("Exception: "+e.getMessage());
+            }
 
             return new ByteArrayInputStream(byteA.toByteArray());
         });
