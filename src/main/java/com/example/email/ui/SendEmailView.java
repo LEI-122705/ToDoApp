@@ -17,11 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 @PageTitle("Enviar Email")
 public class SendEmailView extends VerticalLayout {
 
-    private final EmailService emailService;
-
     @Autowired
     public SendEmailView(EmailService emailService) {
-        this.emailService = emailService;
 
         setPadding(true);
         setSpacing(true);
@@ -41,7 +38,7 @@ public class SendEmailView extends VerticalLayout {
         form.add(toField, subjectField, bodyField);
         add(form);
 
-        // ✅ Cria o botão ANTES de usar dentro da lambda
+        // Cria o botão ANTES de usar dentro da lambda
         Button sendButton = new Button("Enviar Email");
         sendButton.addClickListener(event -> {
             sendButton.setEnabled(false);

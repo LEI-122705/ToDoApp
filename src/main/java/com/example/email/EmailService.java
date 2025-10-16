@@ -16,7 +16,7 @@ public class EmailService {
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
     @Async
-    public CompletableFuture<Void> sendEmail(String to, String subject, String body) {
+    public void sendEmail(String to, String subject, String body) {
         logger.info("Iniciando envio de email assíncrono para '{}', assunto='{}'.", to, subject);
 
         try {
@@ -41,6 +41,6 @@ public class EmailService {
 
         logger.info("Email simulado enviado para '{}'. Assunto='{}'. Corpo:\n{}", to, subject, fullBody);
 
-        return CompletableFuture.completedFuture(null);
+        CompletableFuture.completedFuture(null);
     }
 }
