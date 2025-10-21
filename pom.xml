@@ -123,6 +123,12 @@
             <artifactId>mail</artifactId>
             <version>2.0.0.RC6</version>
         </dependency>
+            <!-- Apache POI para arquivos XLSX -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>5.2.3</version>
+            </dependency>
     </dependencies>
 
     <build>
