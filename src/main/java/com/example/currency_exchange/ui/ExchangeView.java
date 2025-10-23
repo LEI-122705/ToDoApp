@@ -82,7 +82,7 @@ public class ExchangeView extends VerticalLayout {
                 }
             } catch (Exception ex) {
                 Notification.show("Erro ao obter taxa de câmbio: " + ex.getMessage());
-
+                //ola
             }
         });
 
