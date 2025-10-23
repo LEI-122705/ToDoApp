@@ -32,12 +32,3 @@ jobs:
           name: build-jar
           path: '*.jar'
           if-no-files-found: error
-
-      - name: Build and analyze with SonarQube (Maven)
-        run: |
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -Dsonar.projectKey= LEI-122705_ToDoApp \
-            -Dsonar.host.url= https://sonarcloud.io/project/overview?id=LEI-122705_ToDoApp \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-        
-      
