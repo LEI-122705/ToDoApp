@@ -1,1 +1,0 @@
-adicionei este ficheiro para criar a pasta SonarQube no meu projeto
