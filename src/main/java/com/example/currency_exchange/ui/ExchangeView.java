@@ -80,9 +80,10 @@ public class ExchangeView extends VerticalLayout {
                 } else {
                     Notification.show("Erro ao obter taxa de câmbio: " + ex.getMessage());
                 }
-            } catch (Exception ex) {
-                Notification.show("Erro ao obter taxa de câmbio: " + ex.getMessage());
             }
+//            catch (Exception ex) {
+//                Notification.show("Erro ao obter taxa de câmbio: " + ex.getMessage());
+//            }
         });
 
         // Adiciona os componentes à view
