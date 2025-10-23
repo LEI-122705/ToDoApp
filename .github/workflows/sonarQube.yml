@@ -21,13 +21,6 @@ jobs:
         uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      - name: Build and analyze with SonarQube (Maven)
-        run: |
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -Dsonar.projectKey= LEI-122705_ToDoApp \
-            -Dsonar.host.url= https://sonarcloud.io/project/overview?id=LEI-122705_ToDoApp \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
             
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
