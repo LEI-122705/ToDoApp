@@ -16,13 +16,13 @@ jobs:
           fetch-depth: 0
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
-      - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@master
-        with:
-          sonar.projectKey: LEI-122705_ToDoApp
-          sonar.organization: lei-122705
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Build and analyze with Maven
+  run: mvn clean verify sonar:sonar \
+        -Dsonar.projectKey=LEI-122705_ToDoApp \
+        -Dsonar.organization=lei-122705 \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
             
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
