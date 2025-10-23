@@ -2,8 +2,7 @@ on:
   # Trigger analysis when pushing in master or pull requests, and when creating
   # a pull request.
   push:
-    branches:
-      - main
+    branches: ["main"]
   pull_request:
     types: [opened, synchronize, reopened]
 name: SonarQube Workflow
@@ -19,15 +18,11 @@ jobs:
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
+        with:
+          sonar.projectKey: LEI-122705_ToDoApp
+          sonar.organization: lei-122705
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      - name: Build and analyze with SonarQube (Maven)
-        run: |
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -Dsonar.projectKey= LEI-122705_ToDoApp \
-            -Dsonar.host.url= https://sonarcloud.io/project/overview?id=LEI-122705_ToDoApp \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
             
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check

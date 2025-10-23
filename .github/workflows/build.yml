@@ -32,5 +32,3 @@ jobs:
           name: build-jar
           path: '*.jar'
           if-no-files-found: error
-        
-      
