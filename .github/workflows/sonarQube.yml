@@ -19,6 +19,9 @@ jobs:
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
+        with:
+          sonar.projectKey: LEI-122705_ToDoApp
+          sonar.organization: lei-122705
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
             
