@@ -15,6 +15,17 @@ jobs:
           # Disabling shallow clone is recommended for improving relevancy of reporting.
           fetch-depth: 0
 
+      #para compilar codigo antes de fazer o scan
+      - name: configurar Java v21
+        uses: actions/setup-java@v5.0.0
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: compilar o projeto e gerar o .jar
+        run: mvn clean package
+
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
